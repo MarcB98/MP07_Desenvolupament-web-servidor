@@ -91,11 +91,7 @@
 			echo "DNI: " . $this->getDni() . "<br>";
         }
         
-        public function validarUsuario(){
-            
-            if(empty($usuario)){
-                
-        }
+        
     }
 
 ?>

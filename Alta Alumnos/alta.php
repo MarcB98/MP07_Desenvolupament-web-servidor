@@ -13,7 +13,6 @@
     $objUsuario->setSexo($_POST["sexo"]);
     $objUsuario->setDni($_POST["dni"]);
     
-    $objUsuarioç->validarUsuario();
-	$objUsuario->mostrarDatos();
+    $objUsuario->mostrarDatos();
     
 ?>
