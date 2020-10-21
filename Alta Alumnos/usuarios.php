@@ -81,8 +81,9 @@
         }
 		
 		public function mostrarDatos() {
-			
-			echo "Usuario: " . $this->getUsuario() . "<br>";
+            
+            echo "Usuario: " . $this->getUsuario() . "<br>";
+            echo "Password: " . $this->getContrasena() . "<br>";
 			echo "Nombre: " . $this->getNombre() . "<br>";
             echo "Apellido: " . $this->getApellido() . "<br>";
             echo "Correo Electronico: " . $this->getEmail() . "<br>";
