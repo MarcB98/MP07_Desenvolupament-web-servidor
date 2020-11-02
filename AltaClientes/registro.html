@@ -7,20 +7,9 @@
     <title>Alta de Alumnos</title>
 </head>
 <body class="registro">
-
-    <div >
-        <div ><img class="img-navegacio" src="img/img-nav.jpg" alt=""></div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="consultar-tabla.html">Consultar Tabla</a></li>
-            </ul>
-        
-        </nav>
-    </div>
 	    
     <section class="form-register">
-        <h2> Registrar Cliente </h2> <a class="reg" href="login.html">(Ya tengo cuenta)</a> <br>
+        <h2> Registrar Cliente </h2> <a class="reg" href="index.html">(Ya tengo cuenta)</a> <br>
         <form action="registro-ok.php" method = "GET">
             <input  class="controls" type="text" name="usuario" placeholder="Usuario" required maxlength="20"><br><br>
             <input  class="controls" type="password" name="contra" placeholder="Contraseña"><br><br>
@@ -30,7 +19,7 @@
             <input  class="controls" type="number" name="edad" placeholder="Edad"><br><br>
             <input  class="controls" type="text" name="sexo" placeholder="Sexo"><br><br>
             <input  class="controls" type="text" name="dni" placeholder="DNI"><br><br>
-            <input class="botons" onclick="cambiarRsInicio();" name="submit" type="submit" value="Registrarse"/>
+            <input class="botons" name="submit" type="submit" value="Registrarse"/>
             <php?></php>
         </form>
     </section>

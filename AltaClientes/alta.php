@@ -1,6 +1,6 @@
 <?php
 
-    require_once("usuarios.php");
+    require_once("usuario.php");
 
     //Crear Objeto (Instancia de la clase)
 

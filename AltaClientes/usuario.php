@@ -79,20 +79,7 @@
         public function setDni($dni) {
             $this->dni = $dni;
         }
-		
-		public function mostrarDatos() {
-            
-            echo "Usuario: " . $this->getUsuario() . "<br>";
-            echo "Password: " . $this->getContrasena() . "<br>";
-			echo "Nombre: " . $this->getNombre() . "<br>";
-            echo "Apellido: " . $this->getApellido() . "<br>";
-            echo "Correo Electronico: " . $this->getEmail() . "<br>";
-			echo "Edad: " . $this->getEdad() . "<br>";
-			echo "Sexo: " . $this->getSexo() . "<br>";
-			echo "DNI: " . $this->getDni() . "<br>";
-        }
-        
-        
+		   
     }
 
 ?>
