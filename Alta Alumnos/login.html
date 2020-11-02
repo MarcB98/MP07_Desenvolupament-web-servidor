@@ -21,10 +21,10 @@
 	    
     <section class="form-register">
         <h2> Iniciar Sesion </h2><a class="reg" href="registro.html">(Registrarse)</a> <br>
-        <form action="alta.php" method = "post">
+        <form action="login-ok.php" method = "GET">
             <input  class="controls" type="text" name="usuario" placeholder="Usuario"><br><br>
             <input  class="controls" type="password" name="contra" placeholder="Contraseña"><br><br>
-            <input class="botons" name="login" type="submit" value="Iniciar Sesion"/>
+            <input class="botons" onclick="cambiarLInicio();" name="login" type="submit" value="Iniciar Sesion"/>
                        
         </form>
     </section>

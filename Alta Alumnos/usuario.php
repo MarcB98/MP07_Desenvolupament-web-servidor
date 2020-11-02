@@ -1,6 +1,6 @@
 <?php
 
-    class Usuario
+    class Clientes
     {
         // Atributos
         private $usuario = null;

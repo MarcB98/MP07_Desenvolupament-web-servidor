@@ -1,5 +1,9 @@
 <?php
 
+public function cambiarRInicio(){
+    
+}
+
 
 
 ?>
