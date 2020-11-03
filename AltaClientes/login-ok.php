@@ -60,9 +60,10 @@ session_start();
 				$tipo=$fila["usuarios"];
             }
             
-			if($tipo="admin") {
-				header('Location: consultar-tabla.html');
-			}else{
+			if($tipo == "admin") {
+				header('Location: tabla-admin.html');
+			}else if ($tipo == "") {
+				
 				header('Location: home.html');
 			}
 		}

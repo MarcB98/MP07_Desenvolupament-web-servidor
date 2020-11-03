@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Alta de Alumnos</title>
+    <title>MarcB WebPage</title>
 </head>
 <body class="registro">
 	    
@@ -12,13 +12,13 @@
         <h2> Registrar Cliente </h2> <a class="reg" href="index.html">(Ya tengo cuenta)</a> <br>
         <form action="registro-ok.php" method = "GET">
             <input  class="controls" type="text" name="usuario" placeholder="Usuario" required maxlength="20"><br><br>
-            <input  class="controls" type="password" name="contra" placeholder="Contraseña"><br><br>
-            <input  class="controls" type="text" name="nombre" placeholder="Nombre"><br><br>
-            <input  class="controls" type="text" name="apellido" placeholder="Apellido"><br><br>
-            <input  class="controls" type="email" name="email" placeholder="Correo Electronico"><br><br>
-            <input  class="controls" type="number" name="edad" placeholder="Edad"><br><br>
-            <input  class="controls" type="text" name="sexo" placeholder="Sexo"><br><br>
-            <input  class="controls" type="text" name="dni" placeholder="DNI"><br><br>
+            <input  class="controls" type="password" name="contra" placeholder="*************" required><br><br>
+            <input  class="controls" type="text" name="nombre" placeholder="Nombre" required><br><br>
+            <input  class="controls" type="text" name="apellido" placeholder="Apellido" required><br><br>
+            <input  class="controls" type="email" name="email" placeholder="Correo Electronico" required><br><br>
+            <input  class="controls" type="number" name="edad" placeholder="Edad" required><br><br>
+            <input  class="controls" type="text" name="sexo" placeholder="Sexo" required><br><br>
+            <input  class="controls" type="text" name="dni" placeholder="DNI" required><br><br>
             <input class="botons" name="submit" type="submit" value="Registrarse"/>
             <php?></php>
         </form>
