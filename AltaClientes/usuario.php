@@ -3,14 +3,14 @@
     class Clientes
     {
         // Atributos
-        private $usuario = null;
-        private $contra = null;
-        private $email = null;
-        private $nombre = null;
-        private $apellido = null;
-        private $edad = null;
-        private $sexo = null;
-        private $dni = null;
+        private $usuario;
+        private $contra;
+        private $email;
+        private $nombre;
+        private $apellido;
+        private $edad;
+        private $sexo;
+        private $dni;
 
         //CONSTRUCTOR
         function constructor(){

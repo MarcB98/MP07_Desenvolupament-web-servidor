@@ -12,7 +12,7 @@ $comp = false;
 $servidor="localhost";
 $user="root";
 $pass="usbw";
-$bd="test";
+$bd="pw-php";
 
 //FUNCION MOSTRAR ALERT DE ERROR
 function alert($message) { 
@@ -39,7 +39,7 @@ $usuario -> validarNombreApellido($_GET["nombre"],$_GET["apellido"]);
 $usuario -> validarCorreo($_GET["email"]);
 
 //INSERT DE LOS DATOS A LA BBDD
-$consulta = mysql_query($con,"INSERT INTO 'clientes' ( `usuario` , `pass` , `nombre` , `apellidos` , `email` , `edad` , `sexo` , `dni` , `id_usuario` , `tipo` )VALUES ( '".$usuario -> getUsuario()."' , '".$usuario -> getContrasena()."' , '".$usuario -> getNombre()."' , '".$usuario -> getApellido()."' , '".$usuario -> getEmail()."' , '".$usuario -> getEdad()."' , '".$usuario -> getSexo()."' , '".$usuario -> getDni()."' )");
+$consulta = mysqli_query($con,"INSERT INTO 'usuarios' ( `usuario` , `pass` , `nombre` , `apellidos` , `email` , `edad` , `sexo` , `dni` , `id_usuario` , `tipo` )VALUES ( '".$usuario -> getUsuario()."' , '".$usuario -> getContrasena()."' , '".$usuario -> getNombre()."' , '".$usuario -> getApellido()."' , '".$usuario -> getEmail()."' , '".$usuario -> getEdad()."' , '".$usuario -> getSexo()."' , '".$usuario -> getDni()."' )");
 
 if(!$consulta) {
 	die(alert("¡¡Error en la consulta!! "));

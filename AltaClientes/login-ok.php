@@ -6,7 +6,7 @@ session_start();
 	$server="localhost";
 	$user="root";
 	$pass="usbw";
-	$bd="test";
+	$bd="pw-php";
 	//realizamos la conexión
 	$con = mysqli_connect($server, $user, $pass, $bd);
 
@@ -22,7 +22,7 @@ session_start();
 		die("No se ha podido realizar la corrección ERROR:" . mysqli_connect_error() . "<br>");
 	}
 
-	$instruccion = "select COUNT(usuario) AS usuarios from clientes where usuario = '$usuario'";
+	$instruccion = "select COUNT(usuario) AS usuarios from usuarios where usuario = '$usuario'";
 	$resultado = mysqli_query($con, $instruccion);
 
 	while ($fila = $resultado->fetch_assoc()) {
@@ -36,7 +36,7 @@ session_start();
     		window.location.href="index.html";
     	</script>';
 	}else {
-		$instruccion = "select pass as usuarios from clientes where usuario = '$usuario'";
+		$instruccion = "select pass as usuarios from usuarios where usuario = '$usuario'";
 		$resultado = mysqli_query($con, $instruccion);
 		while ($fila = $resultado->fetch_assoc()) {
 			$password2=$fila["usuarios"];
@@ -53,7 +53,7 @@ session_start();
 			$_SESSION["nick_logueado"]=$usuario;
 			$logueado=1;
 
-			$instruccion = "select tipo as usuarios from clientes where usuario = '$usuario'";
+			$instruccion = "select tipo as usuarios from usuarios where usuario = '$usuario'";
 			$resultado = mysqli_query($con, $instruccion);
 
 			while ($fila = $resultado->fetch_assoc()) {
