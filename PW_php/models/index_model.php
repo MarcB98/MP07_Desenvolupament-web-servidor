@@ -1,9 +1,10 @@
 <?php
 
-class Index_model
+class index_model
 {
     
     public function __construct(){
+        //echo "Classe model";
         $this-> indexModel();
     }
 
