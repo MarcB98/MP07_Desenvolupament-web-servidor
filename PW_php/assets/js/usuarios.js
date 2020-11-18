@@ -1,7 +1,0 @@
-class Usuarios{
-    
-    constructor(){
-
-    }
-
-}

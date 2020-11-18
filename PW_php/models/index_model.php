@@ -1,18 +1,12 @@
 <?php
 
-class index_model
+class Index_model 
 {
-    
-    public function __construct(){
-        //echo "Classe model";
-        $this-> indexModel();
-    }
 
-    function indexModel(){
-        
+    public function __construct() {
+        //echo "Clase Model";        
     }
 
 }
-
 
 ?>

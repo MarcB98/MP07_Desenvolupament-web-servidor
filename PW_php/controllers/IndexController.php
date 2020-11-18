@@ -1,13 +1,19 @@
 <?php
 
-class IndexController
+class IndexController extends Controllers
 {
 
     public function __construct() {
-        echo "Mi primer controlador";
+        parent :: __construct();
+    }
+
+    public function Index()
+    {
+        $this->view->Render($this,"index");
     }
 
 }
 
+//Video nº12
 
 ?>
