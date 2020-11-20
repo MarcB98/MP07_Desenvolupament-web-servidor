@@ -33,6 +33,8 @@ spl_autoload_register(function($class){
 });
 
 //LLAMAMOS A LOS CONTROLADORES
+require 'controllers/ErrorController.php';
+$error = new ErrorController();
 $controller = $controller.'Controller';
 $controllersPath = 'controllers/'.$controller.'.php';
 if (file_exists($controllersPath)) {
@@ -48,9 +50,12 @@ if (file_exists($controllersPath)) {
             }else {
                 $controller->{$method}();
             }
+        }else {
+            $error->Error($url);
         }
     }
-    
-}
+}else {
+        $error->Error($url);
+    }
 
 ?>

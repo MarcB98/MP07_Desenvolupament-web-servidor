@@ -1,5 +1,17 @@
-@media(min-width:800px){
-    .container{
-        max-width: 30%;
+.navbar-brand{
+    max-width: 45%;
+}
+
+.imglogo{
+    max-width: 100%;
+}
+
+.border-bottom{
+    border-bottom: 3px solid #d6d5d5 !important;
+}
+
+@media(min-width: 768px){
+    .navbar-brand{
+        max-width: 26%;
     }
 }
