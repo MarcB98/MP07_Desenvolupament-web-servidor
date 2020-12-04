@@ -29,7 +29,7 @@
                             <a class="nav-link text-dark" title="Manage">Logout</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark">Registro</a>
+                            <a href="<?php echo URL ?>User/Registro" class="nav-link text-dark">Registro</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark">Login</a>

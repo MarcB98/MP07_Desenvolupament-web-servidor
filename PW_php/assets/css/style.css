@@ -10,6 +10,19 @@
     border-bottom: 3px solid #d6d5d5 !important;
 }
 
+input[type="file"]{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.responsive-img{
+    max-width: 100%;
+}
+
 @media(min-width: 768px){
     .navbar-brand{
         max-width: 26%;
