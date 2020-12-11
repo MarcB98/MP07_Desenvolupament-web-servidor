@@ -6,7 +6,7 @@ session_start();
 	$server="localhost";
 	$user="root";
 	$pass="usbw";
-	$bd="pw-php";
+	$bd="marcb1";
 	//realizamos la conexión
 	$con = mysqli_connect($server, $user, $pass, $bd);
 
@@ -36,9 +36,9 @@ session_start();
     		window.location.href="index.html";
     	</script>';
 	}else {
-		$instruccion = "select pass as usuarios from usuarios where usuario = '$usuario'";
+		$instruccion = "select contra as usuarios from usuarios where usuario = '$usuario'";
 		$resultado = mysqli_query($con, $instruccion);
-		while ($fila = $resultado->fetch_assoc()) {
+		while ($fila = $resultado->fetch_array()) {
 			$password2=$fila["usuarios"];
 		}
 	
@@ -61,7 +61,7 @@ session_start();
             }
             
 			if($tipo == "admin") {
-				header('Location: tabla-admin.html');
+				header('Location: home-admin.html');
 			}else if ($tipo == "") {
 				
 				header('Location: home.html');

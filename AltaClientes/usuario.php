@@ -11,6 +11,7 @@
         private $edad;
         private $sexo;
         private $dni;
+        private $tipo;
 
         //CONSTRUCTOR
         function constructor(){
@@ -28,8 +29,8 @@
         
         //COMPORVAR PASSWORD
         function validarPassword($contra) {
-            if(strlen($contra) < 6){
-                alert("La contrasena debe tener al menos 6 caracteres");
+            if(strlen($contra) < 4){
+                alert("La contrasena debe tener al menos 4 caracteres");
                return false;
             }
             if(strlen($contra) > 16){
@@ -76,9 +77,9 @@
         //COMPROVAR CORREO ELECTRONICO
         function validarCorreo ($email) {
             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                echo "<br>Email correcto";
+                alert("Email correcto!");
             } else {
-                echo "<br>Email incorrecto";
+                alert("Email incorrecto!");
             }
         }
 

@@ -12,7 +12,7 @@ $comp = false;
 $servidor="localhost";
 $user="root";
 $pass="usbw";
-$bd="pw-php";
+$bd="marcb1";
 
 //FUNCION MOSTRAR ALERT DE ERROR
 function alert($message) { 
@@ -25,6 +25,7 @@ $con=mysqli_connect($servidor,$user,$pass,$bd);
 if(!$con) {
 	die(alert("Error al realizar la conexión: ". mysqli_connect_error() . "<br>"));
 } else {
+	alert("Conexión BBDD correcta");
 	mysqli_set_charset($con,"utf8");
 }
 
@@ -33,13 +34,13 @@ $usuario = new Clientes();
 $usuario -> constructor($_GET["usuario"], $_GET["contra"], $_GET["nombre"], $_GET["apellido"], $_GET["email"], $_GET["edad"], $_GET["sexo"], $_GET["dni"]);
 
 //LLAMAMOS A LAS COMPOVACIONES DEL ARCHIVO usuario.php
-$usuario -> validarPassword($_GET["contra"]);
-$usuario -> validarDNI($_GET["dni"]);
-$usuario -> validarNombreApellido($_GET["nombre"],$_GET["apellido"]);
-$usuario -> validarCorreo($_GET["email"]);
+// $usuario -> validarPassword($_GET["contra"]);
+// $usuario -> validarDNI($_GET["dni"]);
+// $usuario -> validarNombreApellido($_GET["nombre"],$_GET["apellido"]);
+// $usuario -> validarCorreo($_GET["email"]);
 
 //INSERT DE LOS DATOS A LA BBDD
-$consulta = mysqli_query($con,"INSERT INTO 'usuarios' ( `usuario` , `pass` , `nombre` , `apellidos` , `email` , `edad` , `sexo` , `dni` , `id_usuario` , `tipo` )VALUES ( '".$usuario -> getUsuario()."' , '".$usuario -> getContrasena()."' , '".$usuario -> getNombre()."' , '".$usuario -> getApellido()."' , '".$usuario -> getEmail()."' , '".$usuario -> getEdad()."' , '".$usuario -> getSexo()."' , '".$usuario -> getDni()."' )");
+$consulta = mysqli_query($con,"INSERT INTO 'usuarios' ( `usuario` , `contra` , `email` , `nombre` , `apellido` , `edad` , `sexo` , `dni`, ')VALUES ( '".$usuario -> getUsuario()."' , '".$usuario -> getContrasena()."' , '".$usuario -> getEmail()."' , '".$usuario -> getNombre()."' , '".$usuario -> getApellido()."' , '".$usuario -> getEdad()."' , '".$usuario -> getSexo()."' , '".$usuario -> getDni()."')");
 
 if(!$consulta) {
 	die(alert("¡¡Error en la consulta!! "));
