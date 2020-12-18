@@ -3,7 +3,7 @@
 class Views
 {
     
-    public function Render($controllers,$view,$model)
+    public function Render($controllers,$view,$model1,$model2)
     {
 
         $array = explode("Controller",get_class($controllers)); 

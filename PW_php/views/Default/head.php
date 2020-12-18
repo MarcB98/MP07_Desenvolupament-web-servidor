@@ -15,7 +15,7 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand"> 
-                <img src="<?php echo URL.RQ ?>images/icons/icono.png" class="mx-auto w-25 imglogo"> Pagina Web PHP
+                <img src="<?php echo URL.RQ ?>images/icons/icono.png" class="mx-auto w-25 imglogo"> MarcB WP
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" araia-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

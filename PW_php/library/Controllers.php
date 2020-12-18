@@ -1,6 +1,6 @@
 <?php
 
-class Controllers 
+class Controllers extends AnonymousClasses
 {
 
     public function __construct() {
