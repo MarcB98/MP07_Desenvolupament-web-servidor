@@ -8,7 +8,7 @@ class ErrorController extends Controllers
     }
 
     public function Error($url){
-        $this->view->Render($this,"error",$url);
+        $this->view->Render($this,"error",$url,null,null);
     }
 
 }

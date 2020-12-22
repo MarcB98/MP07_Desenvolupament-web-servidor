@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 class Connection
 {
     public $con;
@@ -27,7 +27,7 @@ class Connection
             $response = $sth->fetchAll(CON::FETCH_ASSOC);
             return array("results" => $response);
         } catch (\Throwable $th) {
-            return $e->getMessage();
+            return $th->getMessage();
         }
         $con = null;
     }

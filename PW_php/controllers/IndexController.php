@@ -10,7 +10,7 @@ class IndexController extends Controllers
     public function Index()
     {
         //$this->role->SetRoles();
-        $this->view->Render($this,"index",null,null);
+        $this->view->Render($this,"index",null,null,null);
     }
 
 }

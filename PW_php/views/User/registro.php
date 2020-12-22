@@ -43,39 +43,46 @@
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <input type="text" placeholder="DNI" name="dni" class="form-control" value="<?php echo $model1->DNI ?? "" ?>" autofocus>
-                                            <span class="text-danger">
+                                            <input type="text" placeholder="DNI" name="dni" class="form-control" value="<?php echo $model1->DNI ?? "" ?>" onkeypress="new User().ClearMessages(this)">
+                                            <span id="dni" class="text-danger">
                                                 <?php echo $model2->DNI ?? "" ?>
                                             </span>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" placeholder="Nombre" name="nombre" class="form-control" autofocus>
-                                            <span class="text-danger">
-                                            <?php echo $model2->Nombre ?? "" ?>
+                                            <input type="text" placeholder="Nombre" name="nombre" class="form-control" value="<?php echo $model1->Nombre ?? "" ?>" onkeypress="new User().ClearMessages(this)">
+                                            <span id="nombre" class="text-danger">
+                                                <?php echo $model2->Nombre ?? "" ?>
                                             </span>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" placeholder="Apellidos" name="apellido" class="form-control" autofocus>
-                                            <span class="text-danger">
-                                            <?php echo $model2->Apellidos ?? "" ?>
+                                            <input type="text" placeholder="Apellidos" name="apellido" class="form-control" value="<?php echo $model1->Apellidos ?? "" ?>" onkeypress="new User().ClearMessages(this)" >
+                                            <span id="apellido" class="text-danger">
+                                                <?php echo $model2->Apellidos ?? "" ?>
                                             </span>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" placeholder="Correo Electronico" name="email" class="form-control" autofocus>
-                                            <span class="text-danger">
-                                            <?php echo $model2->Email ?? "" ?>
+                                            <input type="email" placeholder="Email" name="email" class="form-control" value="<?php echo $model1->Email ?? "" ?>" onkeypress="new User().ClearMessages(this)" >
+                                            <span id="email" class="text-danger">
+                                                <?php echo $model2->Email ?? "" ?>
                                             </span>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" placeholder="Contraseña" name="pass" class="form-control" autofocus id="">
-                                            <span class="text-danger">
-                                            <?php echo $model2->Contra ?? "" ?>
+                                            <input type="text" placeholder="Usuario" name="user" class="form-control" value="<?php echo $model1->User ?? "" ?>" onkeypress="new User().ClearMessages(this)" >
+                                            <span id="user" class="text-danger">
+                                                <?php echo $model2->User ?? "" ?>
                                             </span>
                                         </div>
                                         <div class="form-group">
-                                            <select class="form-control">
-                                                <option>Default select</option>
-                                            </select>
+                                            <input type="password" placeholder="Contraseña" name="pass" class="form-control" value="<?php echo $model1->Contraseña ?? "" ?>" onkeypress="new User().ClearMessages(this)" >
+                                            <span id="pass" class="text-danger">
+                                                <?php echo $model2->Contra ?? "" ?>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" placeholder="Repetir Contraseña" name="repass" class="form-control" require  onkeypress="new User().ClearMessages(this)" >
+                                            <span id="repass" class="text-danger">
+                                                <?php echo $model2->Contra1 ?? "" ?>
+                                            </span>
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary">Registrar</button>

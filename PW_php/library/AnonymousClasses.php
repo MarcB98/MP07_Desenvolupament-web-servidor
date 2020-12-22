@@ -10,6 +10,7 @@ class AnonymousClasses{
             public $Apellidos;
             public $Email;
             public $Contra;
+            public $Contra1;
             public $User;
             public $Image;
 
@@ -20,8 +21,9 @@ class AnonymousClasses{
                     $this->Nombre = $array[1];
                     $this->Apellidos = $array[2];
                     $this->Email = $array[3];
-                    $this->Contra = $array[4];
-                    $this->User = $array[5];
+                    $this->Contra = $array[5];
+                    $this->Contra1 = $array[6];
+                    $this->User = $array[4];
                 }
             }
         };

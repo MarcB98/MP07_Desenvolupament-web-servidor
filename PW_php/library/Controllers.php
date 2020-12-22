@@ -4,6 +4,7 @@ class Controllers extends AnonymousClasses
 {
 
     public function __construct() {
+        Session::star();
         $this->view = new Views();
         //$this->role = new Roles();
         $this->loadClassmodels();
