@@ -18,7 +18,7 @@ class Controllers extends AnonymousClasses
 
         if (file_exists($path)) {
             require $path;
-            $this-> $model = new $model;
+            $this-> $model = new $model();
         }
 
     }

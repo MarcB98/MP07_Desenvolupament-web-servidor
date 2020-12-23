@@ -24,7 +24,7 @@ class Connection
             $query = "SELECT ".$attr." FORM ".$table.$where;
             $sth = $this->con->prepare($query);
             $sth->execute($param);
-            $response = $sth->fetchAll(CON::FETCH_ASSOC);
+            $response = $sth->fetchAll(PDO::FETCH_ASSOC);
             return array("results" => $response);
         } catch (\Throwable $th) {
             return $th->getMessage();

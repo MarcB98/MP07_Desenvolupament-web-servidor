@@ -96,27 +96,34 @@ class UserController extends Controllers
         }
 
         $model1 = array(
-            $_POST["dni"],
-            $_POST["nombre"],
-            $_POST["apellido"],
-            $_POST["email"],
-            $_POST["pass"],
-            $_POST["repass"],
-            $_POST["user"]
+            "DNI"=>$_POST["dni"],
+            "Nombre"=>$_POST["nombre"],
+            "Apellido"=>$_POST["apellido"],
+            "Email"=>$_POST["email"],
+            "Pass"=>$_POST["pass"],
+            "Repass"=>$_POST["repass"],
+            "User"=>$_POST["user"]
         );
 
         Session::setSession('model1', serialize($model1));
 
-        Session::setSession('model2', serialize(array(
-            $dni,
-            $nombre,
-            $apellido,
-            $email,
-            $pass,
-            $repass,
-            $user,
-        )));
+        if ($execute) {
+            $value = $this->model->AddUser($this->TUser($model1));
+            Session::setSession('model2', serialize(array(
+                "Contra1"=>$value,
+            )));
+        }else {
+            Session::setSession('model2', serialize(array(
+                "DNI"=>$dni,
+                "Nombre"=>$nombre,
+                "Apellidos"=>$apellido,
+                "Email"=>$email,
+                "User"=>$user,
+                "Contra"=>$pass,
+                "Contra1"=>$repass,
+            )));
+        }
 
-        header('Location: registro');
+        // header('Location: registro');
     }
 }

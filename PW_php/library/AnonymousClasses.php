@@ -12,18 +12,25 @@ class AnonymousClasses{
             public $Contra;
             public $Contra1;
             public $User;
-            public $Image;
+            public $Is_active;
+            public $State;
+            public $Date;
 
             function __construct($array)
             {
                 if (0 < count($array)) {
-                    $this->DNI = $array[0];
-                    $this->Nombre = $array[1];
-                    $this->Apellidos = $array[2];
-                    $this->Email = $array[3];
-                    $this->Contra = $array[5];
-                    $this->Contra1 = $array[6];
-                    $this->User = $array[4];
+
+                    if (!empty($array["DNI"])){$this->DNI = $array["DNI"];}
+                    if (!empty($array["Nombre"])){$this->DNI = $array["Nombre"];}
+                    if (!empty($array["Apellidos"])){$this->DNI = $array["Apellidos"];}
+                    if (!empty($array["Email"])){$this->DNI = $array["Email"];}
+                    if (!empty($array["Contra"])){$this->DNI = $array["Contra"];}
+                    if (!empty($array["Contra1"])){$this->DNI = $array["Contra1"];}
+                    if (!empty($array["User"])){$this->DNI = $array["User"];}
+                    if (!empty($array["Is_active"])){$this->DNI = $array["Is_active"];}
+                    if (!empty($array["State"])){$this->DNI = $array["State"];}
+                    if (!empty($array["Date"])){$this->DNI = $array["Date"];}
+
                 }
             }
         };
