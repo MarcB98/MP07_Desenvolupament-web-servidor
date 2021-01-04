@@ -12,7 +12,7 @@ $comp = false;
 $servidor="localhost";
 $user="root";
 $pass="usbw";
-$bd="marcb1";
+$bd="tienda_php";
 
 //FUNCION MOSTRAR ALERT DE ERROR
 function alert($message) { 
@@ -30,17 +30,17 @@ if(!$con) {
 }
 
 //CREAMOS OBJETO USUARIO Y LO INICIALIZAMOS
-$usuario = new Clientes();
-$usuario -> constructor($_GET["usuario"], $_GET["contra"], $_GET["nombre"], $_GET["apellido"], $_GET["email"], $_GET["edad"], $_GET["sexo"], $_GET["dni"]);
+$usuario = new Usuario();
+$usuario -> constructor($_POST["usuario"], $_POST["contra"], $_POST["nombre"], $_POST["email"], $_POST["dni"]);
 
 //LLAMAMOS A LAS COMPOVACIONES DEL ARCHIVO usuario.php
-// $usuario -> validarPassword($_GET["contra"]);
-// $usuario -> validarDNI($_GET["dni"]);
-// $usuario -> validarNombreApellido($_GET["nombre"],$_GET["apellido"]);
-// $usuario -> validarCorreo($_GET["email"]);
+$usuario -> validarPassword($_POST["contra"]);
+//$usuario -> validarDNI($_GET["dni"]);
+$usuario -> validarNombreApellido($_POST["nombre"],$_POST["apellido"]);
+$usuario -> validarCorreo($_POST["email"]);
 
 //INSERT DE LOS DATOS A LA BBDD
-$consulta = mysqli_query($con,"INSERT INTO 'usuarios' ( `usuario` , `contra` , `email` , `nombre` , `apellido` , `edad` , `sexo` , `dni`, ')VALUES ( '".$usuario -> getUsuario()."' , '".$usuario -> getContrasena()."' , '".$usuario -> getEmail()."' , '".$usuario -> getNombre()."' , '".$usuario -> getApellido()."' , '".$usuario -> getEdad()."' , '".$usuario -> getSexo()."' , '".$usuario -> getDni()."')");
+$consulta = mysqli_query($con,"INSERT INTO 'usuarios' ( `codUsu` , `nomUsu` , `correo` , `pasUsu` , `tipo` , `dni` , `nick`')VALUES ('null', '".$usuario -> getNombre()."' , '".$usuario -> getEmail()."' , '".$usuario -> getContrasena()."' , '".$usuario -> getUsuario()."' , 'user' , '".$usuario -> getDni()."')");
 
 if(!$consulta) {
 	die(alert("¡¡Error en la consulta!! "));

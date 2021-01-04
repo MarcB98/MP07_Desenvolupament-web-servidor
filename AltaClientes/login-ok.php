@@ -6,7 +6,7 @@ session_start();
 	$server="localhost";
 	$user="root";
 	$pass="usbw";
-	$bd="marcb1";
+	$bd="tienda_php";
 	//realizamos la conexión
 	$con = mysqli_connect($server, $user, $pass, $bd);
 
@@ -15,8 +15,8 @@ session_start();
 	header("Content-Type: text/html;charset=utf-8");
 
 
-	$usuario = $_GET["usuario"];
-	$contra = $_GET["contra"];
+	$usuario = $_POST["usuario"];
+	$contra = $_POST["contra"];
 
 	if (!$con) {
 		die("No se ha podido realizar la corrección ERROR:" . mysqli_connect_error() . "<br>");
@@ -62,7 +62,7 @@ session_start();
             
 			if($tipo == "admin") {
 				header('Location: home-admin.html');
-			}else if ($tipo == "") {
+			}else if ($tipo == "user") {
 				
 				header('Location: home.html');
 			}
