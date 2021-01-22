@@ -12,12 +12,11 @@
 
         //CONSTRUCTOR
         public function constructor(){
-            //$this->setUsuario($usuario); 
-            // $this -> setUsuario($usuario);
-            // $this -> setContrasena($contra);
-            // $this -> setEmail($email);
-            // $this -> setNombre($nombre);
-            // $this -> setDni($dni);
+            $this -> setUsuario($usuario); 
+            $this -> setContrasena($contra);
+            $this -> setEmail($email);
+            $this -> setNombre($nombre);
+            $this -> setDni($dni);
         }
 
         //GETTERS Y SETTERS
@@ -90,15 +89,15 @@
         }   
 
         //COMPROVAR DNI
-        // function validarDNI($dni){
-        //     $letra = substr($dni, -1);
-        //     $numeros = substr($dni, 0, -1);
-        //     if ( substr("TRWAGMYFPDXBNJZSQVHLCKE", $numeros%23, 1) == $letra && strlen($letra) == 1 && strlen ($numeros) == 8 ){
-        //         alert("DNI Correcto");
-        //     }else{
-        //         alert("DNI Incorrecto");
-        //     }
-        // }
+        function validarDNI($dni){
+            $letra = substr($dni, -1);
+            $numeros = substr($dni, 0, -1);
+            if ( substr("TRWAGMYFPDXBNJZSQVHLCKE", $numeros%23, 1) == $letra && strlen($letra) == 1 && strlen ($numeros) == 8 ){
+                alert("DNI Correcto");
+            }else{
+                alert("DNI Incorrecto");
+            }
+        }
 
         //COMPROVAR NOMBRE Y APELLIDOS
         function validarNombreApellido($nombre,$apellido){

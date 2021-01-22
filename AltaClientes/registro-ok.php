@@ -12,7 +12,7 @@ $comp = false;
 $servidor="localhost";
 $user="root";
 $pass="usbw";
-$bd="tienda_php";
+$bd="marcb1";
 
 //FUNCION MOSTRAR ALERT DE ERROR
 function alert($message) { 
@@ -30,7 +30,7 @@ if(!$con) {
 }
 
 //CREAMOS OBJETO USUARIO Y LO INICIALIZAMOS
-$usuario = new Usuario();
+$usuario = new Usuarios();
 $usuario -> constructor($_POST["usuario"], $_POST["contra"], $_POST["nombre"], $_POST["email"], $_POST["dni"]);
 
 //LLAMAMOS A LAS COMPOVACIONES DEL ARCHIVO usuario.php

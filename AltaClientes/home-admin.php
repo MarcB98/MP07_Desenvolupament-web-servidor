@@ -11,8 +11,8 @@
     <div ><img class="img-navegacio" src="img/img-nav.jpg" alt=""></div>
     <nav>
         <ul>
-            <li><a href="home.html">Inicio</a></li>
-            <li><a href="consultar-tabla.html">Productos</a></li>
+            <li><a href="home-admin.php">Inicio</a></li>
+            <li><a href="tabla-admin.php">Panel Administrador</a></li>
             <button class="singin" ><a href="index.html">Cerrar Sesion</a></button>
         </ul>
         
