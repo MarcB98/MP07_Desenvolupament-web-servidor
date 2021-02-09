@@ -11,8 +11,13 @@
     <div ><img class="img-navegacio" src="img/img-nav.jpg" alt=""></div>
     <nav>
         <ul>
+<<<<<<< Updated upstream:AltaClientes/home-admin.php
             <li><a href="home-admin.php">Inicio</a></li>
             <li><a href="tabla-admin.php">Panel Administrador</a></li>
+=======
+            <li><a href="home-admin.html">Inicio</a></li>
+            <li><a href="tabla-admin.html">Panel Administrador</a></li>
+>>>>>>> Stashed changes:AltaClientes/home-admin.html
             <button class="singin" ><a href="index.html">Cerrar Sesion</a></button>
         </ul>
         

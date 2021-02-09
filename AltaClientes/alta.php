@@ -4,7 +4,7 @@
 
     //Crear Objeto (Instancia de la clase)
 
-    $objUsuario = new Clientes();
+    $objUsuario = new Usuarios();
     $objUsuario->setUsuario($_POST["usuario"]);
     $objUsuario->setContrasena($_POST["contra"]);
     $objUsuario->setNombre($_POST["nombre"]);
@@ -14,6 +14,6 @@
     $objUsuario->setSexo($_POST["sexo"]);
     $objUsuario->setDni($_POST["dni"]);
     
-    $objUsuario->mostrarDatos();
+    //$objUsuario->mostrarDatos();
     
 ?>
